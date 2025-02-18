@@ -48,5 +48,23 @@ function willSuccess(marks){
         return false;
     }
 }
-const marks=willSuccess([50,60,70,40,30,]);
-console.log(marks);
+// const marks=willSuccess([50,60,70,40,30,]);
+// console.log(marks);
+
+
+function validProposal(person1,person2){
+    if(Math.abs(person1.age-person2.age)>7){
+        return false;
+    }
+    if(person1.gender===person2.gender){
+        return false;
+    }
+    else{
+        return true;
+    }
+}
+const people1={name:"alam",age:20,gender:"male"};
+const people2={name:"asika",age:14,gender:"female"};
+// const people2=["taanon", 20, false];
+const person = validProposal(people1,people2);
+console.log(person);
